@@ -48,3 +48,4 @@ class Categoria(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.TextField(max_length=500,blank=True,null=True)
     criado_em = models.DateTimeField(auto_now_add=True)
+    atualizado_em = models.DateTimeField(auto_now=True)

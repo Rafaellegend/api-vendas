@@ -2,6 +2,7 @@ from rest_framework import serializers
 from vendas.models import Produto, Categoria
 
 class ProdutoSerializer(serializers.ModelSerializer):
+    categoria = serializers.ReadOnlyField(source='categoria.nome')
     class Meta:
         model = Produto
         fields = '__all__'
