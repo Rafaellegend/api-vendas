@@ -4,7 +4,9 @@
 [![Python Version](https://img.shields.io/badge/3.13-Python-brightgreen?logo=python&logoColor=white&color=%233776AB)](https://www.python.org/downloads/)
 [![Django Version](https://img.shields.io/badge/5.2-Django-brightgreen?logo=django&logoColor=white&color=%23092E20)](https://www.djangoproject.com/download/)
 
-Esse projéto faz parte do desáfio proposto na aula de Django REST Framework da plataforma [Alura](https://www.alura.com.br)
+Esse projeto é um desáfio para ver meus conhecimentos sobre Django Rest Api.
+
+O objetivo era criar uma api para uma loja de roupas.
 
 ## 💻Pré-Requisitos
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
@@ -14,14 +16,6 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
     - [Django 5.2](https://www.djangoproject.com/download/)
     - [Django REST framework](https://www.django-rest-framework.org/#installation)
 
-
-
-## Pré-Requisitos
-<!-- Antes de começar, verifique se você atendeu aos seguintes requisitos:
-
-- Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-- Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-- Você leu `<guia / link / documentação_relacionada_ao_projeto>` -->
 ## Rodando localmente
 
 Entre no diretório do projeto
@@ -51,38 +45,33 @@ Inicie o servidor
 ```bash
    pip install -r requirements.txt
 ```
+
+Realize as Migrações
+
+```bash
+  python manage.py makemigrations
+```
+
+```bash
+  python manage.py migrate
+```
+
+(Opicional) Popule os Bancos de dados
+```bash
+  python popular_banco_categorias.py
+```
+```bash
+  python popular_banco_produtos.py
+```
+
 Inicie o servidor
 ```bash
   python manage.py runserver 
 ```
-
-
-<!-- ## Documentação da API
-
-#### Retorna todos os itens
-
-```http
-  GET /api/items
+Acessando Documentação
+```bash
+  http://localhost:[port]/swagger
 ```
-
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
-
-#### Retorna um item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
-
-#### add(num1, num2)
-
-Recebe dois números e retorna a sua soma. -->
-
 
 ## 👨‍💻Autores
 <table>
