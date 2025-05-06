@@ -22,7 +22,7 @@ class Produto(models.Model):
             - Campos automáticos gerados pelo sistema.
         - `atualizado_em`: 
             - Campos automáticos gerados pelo sistema.
-'''
+    '''
     nome = models.CharField(max_length=255)
     descricao = models.TextField(max_length=1000, blank=True, null=True)
     preco = models.DecimalField(max_digits=10, decimal_places=2)
